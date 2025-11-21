@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navigation Menus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .horizontal-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: #0066cc;
+      overflow: hidden;
+    }
+    .horizontal-menu li {
+      float: left;
+    }
+    .horizontal-menu a {
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .horizontal-menu a:hover {
+      background-color: #004080;
+    }
+
+    .vertical-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: #228B22;
+      width: 200px;
+    }
+    .vertical-menu li {
+      border-bottom: 1px solid #555;
+    }
+    .vertical-menu a {
+      display: block;
+      color: #fff;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .vertical-menu a:hover {
+      background-color: #006400;
+    }
+
+    .burger-menu {
+      position: relative;
+      display: inline-block;
+    }
+    .burger-icon {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #cc0000;
+    }
+    .burger-icon div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px 0;
+    }
+    .burger-menu ul {
+      display: none;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: #cc0000;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 150px;
+    }
+    .burger-menu li {
+      border-bottom: 1px solid #555;
+    }
+    .burger-menu a {
+      display: block;
+      color: #fff;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .burger-menu a:hover {
+      background-color: #800000;
+    }
+    .burger-menu ul.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Horizontal Menu</h2>
+  <nav class="horizontal-menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <br><br>
+
+  <h2>Vertical Menu</h2>
+  <nav class="vertical-menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <br><br>
+
+  <h2>Burger Menu</h2>
+  <nav class="burger-menu">
+    <div class="burger-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul id="burger-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("burger-links").classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
